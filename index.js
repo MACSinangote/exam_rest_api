@@ -5,6 +5,7 @@ import dotenv from 'dotenv'
 import authRoutes from './routes/auth.js'
 import userRoutes from './routes/users.js'
 import studentRoutes from './routes/student.js'
+import subjectRoutes from './routes/subject.js'
 import { register } from './controllers/auth.js'
 
 dotenv.config()
@@ -18,6 +19,7 @@ app.post('/auth/register', register)
 app.use('/auth', authRoutes)
 app.use('/users', userRoutes)
 app.use('/student', studentRoutes)
+app.use('/subject', subjectRoutes)
 
 /* Connect to Database */
 const PORT = process.env.PORT || 6001

@@ -4,14 +4,12 @@ import { verifyToken } from '../middleware/auth.js'
 
 const router = express.Router({mergeParams: true})
 
-/*
-router.get('/', verifyToken, getCourses)
-router.get('/:id', verifyToken, getCourse)
-router.post('/', verifyToken, addCourse)
-router.put('/:id', verifyToken, updateCourse)
-router.delete('/:id', verifyToken, deleteCourse)
-*/
+router.get('/', verifyToken, getAllStudent)
+router.get('/:id', verifyToken, getByIdStudent)
+router.post('/', verifyToken, addStudent)
+router.put('/:id', verifyToken, updateStudent)
+router.delete('/:id', verifyToken, deleteStudent)
 
-router.post('/', addStudent)
+// router.post('/', addStudent)
 
 export default router
